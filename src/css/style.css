@@ -1,19 +1,19 @@
-html {
-    min-height: 100% !important;
-}
+
 
 /*  pagecrm  */
 @font-face {
-    font-family: 'Play', sans-serif;
+    font-family: 'Play';
     src: url('../font/Play/Play-Bold.ttf') format('truetype');
     src: url('../font/Play/Play-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Space Grotesk';
     src: url('../font/SpaceGrotesk-VariableFont_wght.ttf') format('truetype');
 }
-
+html {
+    min-height: 100% !important;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -23,6 +23,10 @@ body {
     background: center / cover url("../images/bg-mobile.webp") no-repeat;
     font-family: 'Play', sans-serif;
     padding: 0 10px 0 10px;
+}
+
+button {
+    font-family: 'Play', sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -207,15 +211,26 @@ h5 {
     border-radius: 32px;
     padding: 44px 15px;
 }
-.pagecrm_title {
+
+.pagecrm_frf_title, .pagecrm_frf_subtitle  {
+    font-family: 'Space Grotesk', sans-serif;
+}
+.pagecrm_frf_title {
+    font-size: 24px;
+    padding-bottom: 8px;
+    color: rgba(183, 126, 255, 1)
+}
+.pagecrm_frf_subtitle {
+    text-align: center;
 
 }
+
 .pagecrm_frf_input {
     color: #313149;
     border-radius: 15px;
     display: inline-block;
     background:
-            linear-gradient(rgba(72, 5, 114, 0.3), rgba(72, 5, 114, 0.3)) padding-box,
+            linear-gradient(rgba(72, 5, 114, 0.5), rgba(72, 5, 114, 0.5)) padding-box,
             linear-gradient(168deg, rgba(148,0,255, 0.2) 11%, rgba(198,79,135, 0.2) 100%) border-box;
     padding: 17px 24px;
     border: 5px solid transparent;
@@ -229,7 +244,7 @@ h5 {
     font-family: 'Play', sans-serif;
 }
 .pagecrm_frf_button {
-    color: white;
+    color: rgba(233, 222, 255, 1);
     text-transform: uppercase;
     padding: 20px 0;
     background:
@@ -356,3 +371,150 @@ h5 {
     border-radius: 10px;
     padding: 12px 34px;
 }
+
+/*              PRICES LIST             */
+
+.pagecrm_pl_title {
+    padding-bottom: 45px;
+    text-transform: uppercase;
+}
+
+.pagecrm_pl_card-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.pagecrm_pl_card-wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    background:
+            linear-gradient(30deg, rgba(26, 11, 69, 1) 63%, rgba(95, 49, 147, 1) 100%) padding-box,
+            linear-gradient(85deg, rgba(76,54,157,1) 0%, rgba(33,12,83,1) 100%, rgba(33,12,83,1) 100%) border-box;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 19px 12px;
+    box-shadow: 0 0 20px rgba(215, 149, 255, 1), 0 0 4px rgba(215, 149, 255, 1);
+}
+.pagecrm_pl_card-top-tariff {
+    width: 100%;
+    display: flex;
+    column-gap: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(158, 0, 255, 0.15);
+    border-radius: 10px;
+    padding: 11px 10px;
+}
+
+.pagecrm_pl_card-top-tariff-description {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.pagecrm_pl_card-top-tariff-price {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+    background: linear-gradient(176.42deg, #B195FF -126.75%, #D795FF 97.05%);
+    background-clip: text;
+    color: transparent;
+}
+
+.pagecrm_pl_card-top-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.pagecrm_pl_card-top-list-li {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.pagecrm_pl_card-top-list-li-marker {
+    display: inline-block;
+    background: rgba(82, 67, 194, 0.15);
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.pagecrm_pl_card-button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px 50px 20px 55px;
+    background:
+            linear-gradient(rgba(30, 0, 68, 1), rgba(30, 0, 68, 1)) padding-box,
+            linear-gradient(to right, rgba(56, 63, 236, 1), rgba(35, 255, 255, 1)) border-box;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 1600px) {
+    .pagecrm_pl_card-wrapper {
+        background:
+                linear-gradient(85deg, rgba(76,54,157,1) 0%, rgba(33,12,83,1) 100%, rgba(33,12,83,1) 100%) padding-box,
+                linear-gradient(85deg, rgba(76,54,157,1) 0%, rgba(33,12,83,1) 100%, rgba(33,12,83,1) 100%) border-box;
+    }
+}
+
+/*           FEEDBACK REQUEST FORM SECOND            */
+
+.pagecrm_frfs_wrapper {
+    font-size: 14px;
+    line-height: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background:
+            linear-gradient(rgba(95,49,147,0.9), rgba(95,49,147,0.9)) padding-box,
+            linear-gradient(266.77deg, #FFFFFF -11.99%, #D795FF 42.41%, #7BC2FE 91.84%) border-box;
+    border: 2px solid transparent;
+    border-radius: 32px;
+    padding: 44px 15px;
+}
+.pagecrm_frf_title {
+    font-size: 24px;
+    padding-bottom: 38px;
+    color: rgba(183, 126, 255, 1)
+}
+.pagecrm_frf_subtitle {
+    text-align: center;
+
+}
+
+.pagecrm_frfs_input {
+    color: #313149;
+    border-radius: 15px;
+    display: inline-block;
+    background:
+            linear-gradient(rgba(95,49,147,0.9), rgba(95,49,147,0.9)) padding-box,
+            linear-gradient(266.77deg, rgba(255, 255, 255, 0.2) -11.99%, rgba(215, 149, 255, 0.2) 42.41%, rgba(123, 194, 254, 0.2) 91.84%) border-box;
+    padding: 17px 24px;
+    border: 5px solid transparent;
+}
+
+.pagecrm_frfs_input:focus-visible {
+    outline: 0;
+}
+.pagecrm_frfs_input::placeholder {
+    color: white;
+    font-family: 'Play', sans-serif;
+}
+.pagecrm_frfs_button {
+    color: rgba(233, 222, 255, 1);
+    text-transform: uppercase;
+    padding: 20px 0;
+    background:
+            linear-gradient(rgba(30, 0, 68, 1), rgba(30, 0, 68, 1)) padding-box,
+            linear-gradient(to right, rgba(56, 63, 236, 1), rgba(35, 255, 255, 1)) border-box;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
